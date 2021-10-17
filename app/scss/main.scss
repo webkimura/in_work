@@ -1,0 +1,70 @@
+@use 'sass:math';
+@use 'sass:color';
+
+@import 'config';
+@import 'blocks/**/*';
+
+
+// Пишем код ниже
+
+.container {
+  width: 1200px;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+
+// Хедер
+
+.header {
+  // font-family: 'roboto' serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #eeeeee;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-height: 115px;
+}
+
+.header__logo {
+  width: 160px;
+  min-height: 65px;
+}
+
+// .header__logolink {
+//   &:hover {
+//     color: #fb565a;
+//   }
+// }
+
+.header__items {
+  text-transform: uppercase;
+  margin-right: 50px;
+  &:hover {
+    color: #fb565a;
+  }
+}
+
+.header__button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-image: url(/images/cart-icon.png);
+    left: -25px;
+    top: 6px;
+  }
+  &:hover {
+    color: #fb565a;
+  }
+}
